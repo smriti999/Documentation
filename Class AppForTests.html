@@ -7,11 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppCircle</div>
+    <div id="PageTitle">Class AppForTests</div>
     <div id="Contents" />
 
     
- Represents the command used to draw a circle on the canvas.
+ Unit tests for the <a href="" >AppFor</a> class.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppCircle : CommandOneParameter</pre></td></tr></tbody></table>
+    public class AppForTests</pre></td></tr></tbody></table>
     
     
     
@@ -40,12 +40,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method Setup</div>
     <div id="Contents" />
 
     
- Executes the circle drawing command using the specified radius.
- This implementation bypasses the default BOOSE maximum radius restriction.
+ Sets up the test environment before each test method.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +59,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
+    public void Setup()</pre></td></tr></tbody></table>
     
     
     
@@ -74,12 +73,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
+    <div id="PageTitle">Method Constructor_CreatesInstance</div>
     <div id="Contents" />
 
     
- Validates the parameters supplied to the circle command.
- Ensures exactly one parameter is provided.
+ Tests that the constructor creates an instance of <a href="" >AppFor</a>.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,42 +92,13 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-An array containing the command parameters.
-</div>
-
+    public void Constructor_CreatesInstance()</pre></td></tr></tbody></table>
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>CommandException</span></td>
-<td>
- Thrown when the number of parameters is not equal to one.
- </td>
-</tr>
-</table
-</div>
-</div>
-
+    
+    
     
     
 

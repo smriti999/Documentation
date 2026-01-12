@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/ContentsMerged.css" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/ContentsMerged.css" />
     <title>Class GenericClass</title>
 </head>
 <body><p><div id="Header">
@@ -11,10 +11,12 @@
     <div id="Contents" />
 
     
- Command to write text to the canvas at the current cursor position.
+ Represents a command to write text on the canvas.
+ Inherits from <a href="" >CommandOneParameter</a> and provides functionality to display
+ text messages with length restrictions.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -26,7 +28,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppWrite : CanvasCommand</pre></td></tr></tbody></table>
+    internal class AppWrite : CommandOneParameter</pre></td></tr></tbody></table>
     
     
     
@@ -34,6 +36,22 @@
     
     
     
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Remarks
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+
+ This command requires exactly one parameter: the text message to be displayed.
+ The text length is restricted to a maximum of 1000 characters.
+ 
+</div>
+</div>
+
     
 
 </div>
@@ -44,10 +62,10 @@
     <div id="Contents" />
 
     
- The text message to be written to the canvas.
+ The text message to be written on the canvas.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -59,7 +77,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private string text = string.Empty</pre></td></tr></tbody></table>
+    private string text</pre></td></tr></tbody></table>
     
     
     
@@ -77,10 +95,11 @@
     <div id="Contents" />
 
     
- Default constructor used for factory creation.
+ Initializes a new instance of the <a href="" >AppWrite</a> class.
+ This constructor is used by the command factory pattern.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -110,10 +129,10 @@
     <div id="Contents" />
 
     
- Creates a new AppWrite command with the specified canvas and message.
+ Initializes a new instance of the <a href="" >AppWrite</a> class with a specified canvas and message.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -125,14 +144,15 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppWrite(ICanvas c, string message) : base(c)</pre></td></tr></tbody></table>
+    public AppWrite(Canvas c, string message)
+            : base(c)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
 <div class='CommentParameterName'>c</div><div class='ParameterCommentContainer'>
-The canvas to write text on.
+The canvas instance on which to write the text.
 </div>
 <div class='CommentParameterName'>message</div><div class='ParameterCommentContainer'>
-The text message to write.
+The text message to be written on the canvas.
 </div>
 
     
@@ -150,11 +170,11 @@ The text message to write.
     <div id="Contents" />
 
     
- Executes the write command by printing text to the canvas.
- Validates that text is non-empty and does not exceed 1000 characters.
- 
+         Executes the write command with the specified text message.
+         Uses the unprocessed parameter directly as the text to be written.
+         
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -174,7 +194,7 @@ The text message to write.
     
     
 <div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
    <span class='SectionHeader'>
        <span class='ArrowCursor'>
        Exceptions
@@ -191,8 +211,8 @@ The text message to write.
 <tr>
 <td><span class='PseudoLink'>RestrictionException</span></td>
 <td>
- Thrown if the text is empty or exceeds 1000 characters.
- </td>
+         Thrown when the text length exceeds the maximum allowed length of 1000 characters.
+         </td>
 </tr>
 </table
 </div>
@@ -209,10 +229,10 @@ The text message to write.
     <div id="Contents" />
 
     
- Validates that exactly one string parameter is supplied for the write command.
- 
+         Validates the parameters passed to the write command and stores the unprocessed text.
+         
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -228,7 +248,7 @@ The text message to write.
     
     <div class='CommentHeader'>Parameters</div>
 <div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-The array of parameters passed to the command.
+An array of string parameters to validate.
 </div>
 
     
@@ -236,7 +256,7 @@ The array of parameters passed to the command.
     
     
 <div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
    <span class='SectionHeader'>
        <span class='ArrowCursor'>
        Exceptions
@@ -253,8 +273,9 @@ The array of parameters passed to the command.
 <tr>
 <td><span class='PseudoLink'>CommandException</span></td>
 <td>
- Thrown if the number of parameters is not exactly one.
- </td>
+         Thrown when the number of parameters is not exactly 1, as the write command
+         requires exactly one text parameter.
+         </td>
 </tr>
 </table
 </div>

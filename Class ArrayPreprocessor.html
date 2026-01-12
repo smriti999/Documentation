@@ -7,11 +7,14 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppCircle</div>
+    <div id="PageTitle">Class ArrayPreprocessor</div>
     <div id="Contents" />
 
     
- Represents the command used to draw a circle on the canvas.
+ Simple preprocessor that rewrites BOOSE array / poke / peek commands
+ into equivalent scalar variable operations. This allows the supplied
+ "unrestricted arrays" example program to run without relying on the
+ restricted BOOSE.Array / Poke / Peek implementations.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +29,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppCircle : CommandOneParameter</pre></td></tr></tbody></table>
+    internal static class ArrayPreprocessor</pre></td></tr></tbody></table>
     
     
     
@@ -40,12 +43,15 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method RewriteArrays</div>
     <div id="Contents" />
 
     
- Executes the circle drawing command using the specified radius.
- This implementation bypasses the default BOOSE maximum radius restriction.
+ Rewrites any occurrences of:
+   array &lt;type&gt; &lt;name&gt; &lt;size&gt;
+   poke &lt;name&gt; &lt;index&gt; = &lt;expr&gt;
+   peek &lt;var&gt; = &lt;name&gt; &lt;index&gt;
+ into combinations of normal int/real declarations and assignments.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,76 +66,54 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
-    <div id="Contents" />
-
-    
- Validates the parameters supplied to the circle command.
- Ensures exactly one parameter is provided.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    public static string RewriteArrays(string source)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-An array containing the command parameters.
+<div class='CommentParameterName'>source</div><div class='ParameterCommentContainer'>
+Original BOOSE program text.
+</div>
+
+    <div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+Rewritten program text.
 </div>
 
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>CommandException</span></td>
-<td>
- Thrown when the number of parameters is not equal to one.
- </td>
-</tr>
-</table
-</div>
+    
+
 </div>
 
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method SplitTokens</div>
+    <div id="Contents" />
+
+    
+ Splits a single line into tokens separated by whitespace.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private static string[] SplitTokens(string line)</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
     
     
 

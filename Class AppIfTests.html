@@ -7,11 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppClear</div>
+    <div id="PageTitle">Class AppIfTests</div>
     <div id="Contents" />
 
     
- Command to clear the canvas. Removes all drawings and resets it to a blank state.
+ Unit tests for the <a href="" >AppIf</a> class.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppClear : CanvasCommand</pre></td></tr></tbody></table>
+    public class AppIfTests</pre></td></tr></tbody></table>
     
     
     
@@ -40,12 +40,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppClear</div>
+    <div id="PageTitle">Method Setup</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >AppClear</a> class.
- Default constructor used for factory-based creation.
+ Sets up the test environment before each test method.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +59,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppClear()</pre></td></tr></tbody></table>
+    public void Setup()</pre></td></tr></tbody></table>
     
     
     
@@ -74,12 +73,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppClear</div>
+    <div id="PageTitle">Method Constructor_CreatesInstance</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >AppClear</a> class
- with the specified canvas.
+ Tests that the constructor creates an instance of <a href="" >AppIf</a>.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,45 +92,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppClear(ICanvas c) : base(c)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>c</div><div class='ParameterCommentContainer'>
-The canvas to be cleared.
-</div>
-
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
-    <div id="Contents" />
-
-    
- Executes the clear command by removing all drawings from the canvas
- and resetting the pen position.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
+    public void Constructor_CreatesInstance()</pre></td></tr></tbody></table>
     
     
     
@@ -146,13 +106,11 @@ The canvas to be cleared.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
+    <div id="PageTitle">Method IsConditionalCommand_ReturnsTrue</div>
     <div id="Contents" />
 
     
- Validates parameters for the Clear command.
- This command intentionally takes no parameters.
- Any extra tokens are accepted and ignored for robustness.
+ Tests that AppIf is a ConditionalCommand.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -167,13 +125,9 @@ The canvas to be cleared.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    public void IsConditionalCommand_ReturnsTrue()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-The provided command parameters.
-</div>
-
+    
     
     
     

@@ -7,12 +7,11 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppRect</div>
+    <div id="PageTitle">Class AppCommandFactoryTests</div>
     <div id="Contents" />
 
     
- Command that draws a rectangle on the canvas.
- Supports filled and unfilled rectangles.
+ Unit tests for the <a href="" >AppCommandFactory</a> class.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +26,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    internal class AppRect : CanvasCommand</pre></td></tr></tbody></table>
+    public class AppCommandFactoryTests</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +40,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field width</div>
+    <div id="PageTitle">Method Setup</div>
     <div id="Contents" />
 
     
- Width of the rectangle.
+ Sets up the test environment before each test method.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +59,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private int width</pre></td></tr></tbody></table>
+    public void Setup()</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +73,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field height</div>
+    <div id="PageTitle">Method MakeCommand_CreateCircle_ReturnsAppCircle</div>
     <div id="Contents" />
 
     
- Height of the rectangle.
+ Tests that MakeCommand creates an AppCircle instance for "circle".
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +92,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private int height</pre></td></tr></tbody></table>
+    public void MakeCommand_CreateCircle_ReturnsAppCircle()</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +106,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field filled</div>
+    <div id="PageTitle">Method MakeCommand_CreateRect_ReturnsAppRect</div>
     <div id="Contents" />
 
     
- Whether the rectangle is filled.
+ Tests that MakeCommand creates an AppRect instance for "rect".
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,7 +125,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private bool filled</pre></td></tr></tbody></table>
+    public void MakeCommand_CreateRect_ReturnsAppRect()</pre></td></tr></tbody></table>
     
     
     
@@ -140,11 +139,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppRect</div>
+    <div id="PageTitle">Method MakeCommand_CreateTriangle_ReturnsAppTriangle</div>
     <div id="Contents" />
 
     
- Default constructor used for factory creation.
+ Tests that MakeCommand creates an AppTriangle instance for "triangle".
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -159,7 +158,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppRect()</pre></td></tr></tbody></table>
+    public void MakeCommand_CreateTriangle_ReturnsAppTriangle()</pre></td></tr></tbody></table>
     
     
     
@@ -173,11 +172,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppRect</div>
+    <div id="PageTitle">Method MakeCommand_CreateWrite_ReturnsAppWrite</div>
     <div id="Contents" />
 
     
- Creates an AppRect command with explicit width, height, and fill option.
+ Tests that MakeCommand creates an AppWrite instance for "write".
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -192,53 +191,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppRect(ICanvas c, int width, int height, bool filled = false) : base(c)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>c</div><div class='ParameterCommentContainer'>
-The canvas the command will be executed on.
-</div>
-<div class='CommentParameterName'>width</div><div class='ParameterCommentContainer'>
-Rectangle width.
-</div>
-<div class='CommentParameterName'>height</div><div class='ParameterCommentContainer'>
-Rectangle height.
-</div>
-<div class='CommentParameterName'>filled</div><div class='ParameterCommentContainer'>
-Whether the rectangle is filled (default false).
-</div>
-
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
-    <div id="Contents" />
-
-    
- Executes the rectangle drawing command on the canvas.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
+    public void MakeCommand_CreateWrite_ReturnsAppWrite()</pre></td></tr></tbody></table>
     
     
     
@@ -252,12 +205,11 @@ Whether the rectangle is filled (default false).
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
+    <div id="PageTitle">Method MakeCommand_CreateInt_ReturnsAppInt</div>
     <div id="Contents" />
 
     
- Validates and parses parameters for the rectangle command.
- Accepts "width,height[,filled]" in one token or separate tokens.
+ Tests that MakeCommand creates an AppInt instance for "int".
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -272,44 +224,13 @@ Whether the rectangle is filled (default false).
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-List of raw parameters supplied by the parser.
-</div>
-
+    public void MakeCommand_CreateInt_ReturnsAppInt()</pre></td></tr></tbody></table>
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>CommandException</span></td>
-<td>Thrown if width/height are missing.</td>
-</tr>
-<tr>
-<td><span class='PseudoLink'>RestrictionException</span></td>
-<td>Thrown if width or height is negative.</td>
-</tr>
-</table
-</div>
-</div>
-
+    
+    
     
     
 
@@ -317,12 +238,11 @@ List of raw parameters supplied by the parser.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ParseBool</div>
+    <div id="PageTitle">Method MakeCommand_CreateReal_ReturnsAppReal</div>
     <div id="Contents" />
 
     
- Parses various string forms into a boolean "filled" flag.
- Accepts: true, filled, 1, yes.
+ Tests that MakeCommand creates an AppReal instance for "real".
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -337,18 +257,208 @@ List of raw parameters supplied by the parser.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private static bool ParseBool(string s)</pre></td></tr></tbody></table>
+    public void MakeCommand_CreateReal_ReturnsAppReal()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>s</div><div class='ParameterCommentContainer'>
-Raw string input.
+    
+    
+    
+    
+    
+    
+    
+
 </div>
 
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-True if the string indicates a filled shape.
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method MakeCommand_CreateIf_ReturnsAppIf</div>
+    <div id="Contents" />
+
+    
+ Tests that MakeCommand creates an AppIf instance for "if".
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void MakeCommand_CreateIf_ReturnsAppIf()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
 </div>
 
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method MakeCommand_CreateWhile_ReturnsAppWhile</div>
+    <div id="Contents" />
+
+    
+ Tests that MakeCommand creates an AppWhile instance for "while".
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void MakeCommand_CreateWhile_ReturnsAppWhile()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method MakeCommand_CreateFor_ReturnsAppFor</div>
+    <div id="Contents" />
+
+    
+ Tests that MakeCommand creates an AppFor instance for "for".
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void MakeCommand_CreateFor_ReturnsAppFor()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method MakeCommand_CreateMethod_ReturnsAppMethod</div>
+    <div id="Contents" />
+
+    
+ Tests that MakeCommand creates an AppMethod instance for "method".
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void MakeCommand_CreateMethod_ReturnsAppMethod()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method MakeCommand_CreateCall_ReturnsAppCall</div>
+    <div id="Contents" />
+
+    
+ Tests that MakeCommand creates an AppCall instance for "call".
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void MakeCommand_CreateCall_ReturnsAppCall()</pre></td></tr></tbody></table>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method MakeCommand_CreateArray_ReturnsAppArray</div>
+    <div id="Contents" />
+
+    
+ Tests that MakeCommand creates an AppArray instance for "array".
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public void MakeCommand_CreateArray_ReturnsAppArray()</pre></td></tr></tbody></table>
+    
+    
+    
     
     
     

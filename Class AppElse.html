@@ -7,11 +7,12 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppClear</div>
+    <div id="PageTitle">Class AppElse</div>
     <div id="Contents" />
 
     
- Command to clear the canvas. Removes all drawings and resets it to a blank state.
+ Represents an application-specific implementation of the <a href="" >Else</a> command.
+ Handles the execution flow of an <span class="Code">else</span> block within conditional logic.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +27,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppClear : CanvasCommand</pre></td></tr></tbody></table>
+    public class AppElse : CompoundCommand</pre></td></tr></tbody></table>
     
     
     
@@ -40,12 +41,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppClear</div>
+    <div id="PageTitle">Constructor AppElse</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >AppClear</a> class.
- Default constructor used for factory-based creation.
+ Initializes a new instance of the <a href="" >AppElse</a> class.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +60,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppClear()</pre></td></tr></tbody></table>
+    public AppElse()</pre></td></tr></tbody></table>
     
     
     
@@ -74,12 +74,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppClear</div>
+    <div id="PageTitle">Method Compile</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >AppClear</a> class
- with the specified canvas.
+ Compiles the <span class="Code">else</span> command by linking it to its corresponding
+ conditional command and updating line number boundaries.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,13 +94,9 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppClear(ICanvas c) : base(c)</pre></td></tr></tbody></table>
+    public override void Compile()</pre></td></tr></tbody></table>
     
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>c</div><div class='ParameterCommentContainer'>
-The canvas to be cleared.
-</div>
-
+    
     
     
     
@@ -116,8 +112,9 @@ The canvas to be cleared.
     <div id="Contents" />
 
     
- Executes the clear command by removing all drawings from the canvas
- and resetting the pen position.
+ Executes the <span class="Code">else</span> block.
+ If the corresponding condition evaluates to <span class="Code">true</span>,
+ execution skips to the end of the <span class="Code">else</span> block.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -150,9 +147,8 @@ The canvas to be cleared.
     <div id="Contents" />
 
     
- Validates parameters for the Clear command.
- This command intentionally takes no parameters.
- Any extra tokens are accepted and ignored for robustness.
+ Validates parameters for the <span class="Code">else</span> command.
+ This command does not accept any parameters.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -167,11 +163,11 @@ The canvas to be cleared.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    public override void CheckParameters(string[] parameter)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-The provided command parameters.
+<div class='CommentParameterName'>parameter</div><div class='ParameterCommentContainer'>
+The supplied command parameters.
 </div>
 
     

@@ -7,11 +7,13 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppCircle</div>
+    <div id="PageTitle">Class RestrictionHelper</div>
     <div id="Contents" />
 
     
- Represents the command used to draw a circle on the canvas.
+ Provides helper methods to reset internal restriction counters and static limits
+ in the BOOSE library, preventing "restriction limit reached" errors during long
+ or nested program execution.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +28,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppCircle : CommandOneParameter</pre></td></tr></tbody></table>
+    public static class RestrictionHelper</pre></td></tr></tbody></table>
     
     
     
@@ -40,12 +42,13 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method ResetRestrictions</div>
     <div id="Contents" />
 
     
- Executes the circle drawing command using the specified radius.
- This implementation bypasses the default BOOSE maximum radius restriction.
+ Resets counters and static limit fields across BOOSE commands and related types.
+ Iterates through the BOOSE assembly and attempts to reset all static <a href="" >int</a> fields.
+ Specific obfuscated fields are also reset individually.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +63,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
+    public static void ResetRestrictions()</pre></td></tr></tbody></table>
     
     
     
@@ -74,12 +77,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
+    <div id="PageTitle">Method SetField</div>
     <div id="Contents" />
 
     
- Validates the parameters supplied to the circle command.
- Ensures exactly one parameter is provided.
+ Sets the value of a static, non-public integer field on a type.
+ Used internally by <a href="" >ResetRestrictions</a>.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,42 +97,23 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    private static void SetField(Type type, string fieldName, int value)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-An array containing the command parameters.
+<div class='CommentParameterName'>type</div><div class='ParameterCommentContainer'>
+The type that contains the field.
+</div>
+<div class='CommentParameterName'>fieldName</div><div class='ParameterCommentContainer'>
+The name of the field to set.
+</div>
+<div class='CommentParameterName'>value</div><div class='ParameterCommentContainer'>
+The value to assign to the field.
 </div>
 
     
     
     
     
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>CommandException</span></td>
-<td>
- Thrown when the number of parameters is not equal to one.
- </td>
-</tr>
-</table
-</div>
-</div>
-
     
     
 

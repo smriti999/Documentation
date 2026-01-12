@@ -7,11 +7,13 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppClear</div>
+    <div id="PageTitle">Class AppStoredProgram</div>
     <div id="Contents" />
 
     
- Command to clear the canvas. Removes all drawings and resets it to a blank state.
+ Represents a custom implementation of the <a href="" >StoredProgram</a> class.
+ Overrides <a href="" >Run</a> to execute commands until completion and
+ allows interception of certain commands like <a href="" >Call</a>.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -26,7 +28,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public class AppClear : CanvasCommand</pre></td></tr></tbody></table>
+    public class AppStoredProgram : StoredProgram</pre></td></tr></tbody></table>
     
     
     
@@ -40,12 +42,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppClear</div>
+    <div id="PageTitle">Field ExecuteAdd</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >AppClear</a> class.
- Default constructor used for factory-based creation.
+ Flag to control whether commands should actually be added to the program.
+ Useful for suppressing commands during wrapper execution.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +62,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppClear()</pre></td></tr></tbody></table>
+    public bool ExecuteAdd = true</pre></td></tr></tbody></table>
     
     
     
@@ -74,12 +76,11 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppClear</div>
+    <div id="PageTitle">Constructor AppStoredProgram</div>
     <div id="Contents" />
 
     
- Initializes a new instance of the <a href="" >AppClear</a> class
- with the specified canvas.
+ Initializes a new instance of the <a href="" >AppStoredProgram</a> class.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -94,14 +95,55 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppClear(ICanvas c) : base(c)</pre></td></tr></tbody></table>
+    public AppStoredProgram(ICanvas canvas) : base(canvas)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>canvas</div><div class='ParameterCommentContainer'>
+The canvas on which the program operates.
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Add</div>
+    <div id="Contents" />
+
+    
+ Adds a command to the program. Can intercept certain command types and replace them.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public override int Add(Command c)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
 <div class='CommentParameterName'>c</div><div class='ParameterCommentContainer'>
-The canvas to be cleared.
+The command to add.
 </div>
 
-    
+    <div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+The index at which the command was added, or -1 if blocked.
+</div>
+
     
     
     
@@ -112,12 +154,11 @@ The canvas to be cleared.
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method Execute</div>
+    <div id="PageTitle">Method AddVariable</div>
     <div id="Contents" />
 
     
- Executes the clear command by removing all drawings from the canvas
- and resetting the pen position.
+ Adds a variable to the program. This is not blocked by <a href="" >ExecuteAdd</a>.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -132,48 +173,48 @@ The canvas to be cleared.
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void Execute()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
-    <div id="Contents" />
-
-    
- Validates parameters for the Clear command.
- This command intentionally takes no parameters.
- Any extra tokens are accepted and ignored for robustness.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    public override void AddVariable(Evaluation e)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-The provided command parameters.
+<div class='CommentParameterName'>e</div><div class='ParameterCommentContainer'>
+The evaluation/variable to add.
 </div>
 
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Run</div>
+    <div id="Contents" />
+
+    
+ Executes all commands in the stored program.
+ Continues execution until all commands are processed or a safety limit is reached.
+ Resets restrictions before each command execution.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public override void Run()</pre></td></tr></tbody></table>
+    
+    
     
     
     

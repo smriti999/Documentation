@@ -7,12 +7,13 @@
 </head>
 <body><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Class AppRect</div>
+    <div id="PageTitle">Class AppCall</div>
     <div id="Contents" />
 
     
- Command that draws a rectangle on the canvas.
- Supports filled and unfilled rectangles.
+ Represents an application-specific implementation of the <a href="" >ConditionalCommand</a> class.
+ This class acts as a wrapper around the sealed <a href="" >Call</a> command,
+ providing custom execution behavior and restriction handling.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -27,7 +28,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    internal class AppRect : CanvasCommand</pre></td></tr></tbody></table>
+    public class AppCall : ConditionalCommand</pre></td></tr></tbody></table>
     
     
     
@@ -41,11 +42,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field width</div>
+    <div id="PageTitle">Field inner</div>
     <div id="Contents" />
 
     
- Width of the rectangle.
+ Internal wrapped instance of the sealed <a href="" >Call</a> class
+ used to delegate core call functionality.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -60,7 +62,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private int width</pre></td></tr></tbody></table>
+    private BOOSE.Call inner</pre></td></tr></tbody></table>
     
     
     
@@ -74,11 +76,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field height</div>
+    <div id="PageTitle">Constructor AppCall</div>
     <div id="Contents" />
 
     
- Height of the rectangle.
+ Initializes a new instance of the <a href="" >AppCall</a> class
+ with a default <a href="" >Call</a> implementation.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -93,7 +96,7 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private int height</pre></td></tr></tbody></table>
+    public AppCall()</pre></td></tr></tbody></table>
     
     
     
@@ -107,11 +110,12 @@
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Field filled</div>
+    <div id="PageTitle">Constructor AppCall</div>
     <div id="Contents" />
 
     
- Whether the rectangle is filled.
+ Initializes a new instance of the <a href="" >AppCall</a> class
+ with the specified parameter string.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -126,88 +130,85 @@
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private bool filled</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppRect</div>
-    <div id="Contents" />
-
-    
- Default constructor used for factory creation.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppRect()</pre></td></tr></tbody></table>
-    
-    
-    
-    
-    
-    
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Constructor AppRect</div>
-    <div id="Contents" />
-
-    
- Creates an AppRect command with explicit width, height, and fill option.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public AppRect(ICanvas c, int width, int height, bool filled = false) : base(c)</pre></td></tr></tbody></table>
+    public AppCall(string parameters)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>c</div><div class='ParameterCommentContainer'>
-The canvas the command will be executed on.
-</div>
-<div class='CommentParameterName'>width</div><div class='ParameterCommentContainer'>
-Rectangle width.
-</div>
-<div class='CommentParameterName'>height</div><div class='ParameterCommentContainer'>
-Rectangle height.
-</div>
-<div class='CommentParameterName'>filled</div><div class='ParameterCommentContainer'>
-Whether the rectangle is filled (default false).
+<div class='CommentParameterName'>parameters</div><div class='ParameterCommentContainer'>
+The parameter string associated with the call.
 </div>
 
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method CheckParameters</div>
+    <div id="Contents" />
+
+    
+ Validates the parameters supplied to the call command.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
+An array of parameter strings.
+</div>
+
+    
+    
+    
+    
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method Compile</div>
+    <div id="Contents" />
+
+    
+ Compiles the call command by ensuring the wrapped call
+ is properly associated with the current program and
+ validating the target method.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    public override void Compile()</pre></td></tr></tbody></table>
+    
+    
     
     
     
@@ -223,7 +224,9 @@ Whether the rectangle is filled (default false).
     <div id="Contents" />
 
     
- Executes the rectangle drawing command on the canvas.
+ Executes the call command, managing execution flow,
+ program counter correction, and interaction with
+ application-specific method execution rules.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -252,12 +255,12 @@ Whether the rectangle is filled (default false).
 
 </p><hr></hr><p><div id="Header">
     <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method CheckParameters</div>
+    <div id="PageTitle">Method Set</div>
     <div id="Contents" />
 
     
- Validates and parses parameters for the rectangle command.
- Accepts "width,height[,filled]" in one token or separate tokens.
+ Associates the call command with the specified stored program
+ and parameter string while preventing duplicate command registration.
  
         <div id='SectionHeader0' class='SectionHeader'>
         <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
@@ -272,83 +275,17 @@ Whether the rectangle is filled (default false).
     <table class='CodeTable'>
     <colgroup><col width='100%'></colgroup>
     <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    public override void CheckParameters(string[] parameterList)</pre></td></tr></tbody></table>
+    public override void Set(StoredProgram Program, string Params)</pre></td></tr></tbody></table>
     
     <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>parameterList</div><div class='ParameterCommentContainer'>
-List of raw parameters supplied by the parser.
+<div class='CommentParameterName'>Program</div><div class='ParameterCommentContainer'>
+The stored program instance.
+</div>
+<div class='CommentParameterName'>Params</div><div class='ParameterCommentContainer'>
+The parameter string for the call.
 </div>
 
     
-    
-    
-    
-<div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
-   <span class='SectionHeader'>
-       <span class='ArrowCursor'>
-       Exceptions
-       </span>
-   </span>
-</div>
-<div id='SectionContainerDiv1' class='SectionContainer'>
-<table class='MembersTable'>
-<col width='25%' />
-<col width='75%' />
-<tr>
-<th>Exception</th>
-<th>Condition</th></tr>
-<tr>
-<td><span class='PseudoLink'>CommandException</span></td>
-<td>Thrown if width/height are missing.</td>
-</tr>
-<tr>
-<td><span class='PseudoLink'>RestrictionException</span></td>
-<td>Thrown if width or height is negative.</td>
-</tr>
-</table
-</div>
-</div>
-
-    
-    
-
-</div>
-
-</p><hr></hr><p><div id="Header">
-    <div id="ProjectTitle">Documentation Preview</div>
-    <div id="PageTitle">Method ParseBool</div>
-    <div id="Contents" />
-
-    
- Parses various string forms into a boolean "filled" flag.
- Accepts: true, filled, 1, yes.
- 
-        <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
-        <span class='SectionHeader'>
-            <span class='ArrowCursor' >
-            Syntax
-            </span>
-        </span>
-    </div>
-
-    <div id='SectionContainerDiv0' class='SectionContainer'>
-    <table class='CodeTable'>
-    <colgroup><col width='100%'></colgroup>
-    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
-    private static bool ParseBool(string s)</pre></td></tr></tbody></table>
-    
-    <div class='CommentHeader'>Parameters</div>
-<div class='CommentParameterName'>s</div><div class='ParameterCommentContainer'>
-Raw string input.
-</div>
-
-    <div class='CommentHeader'>Return Value</div>
-<div class='ParameterCommentContainer'>
-True if the string indicates a filled shape.
-</div>
-
     
     
     

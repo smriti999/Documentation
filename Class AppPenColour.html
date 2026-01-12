@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/ContentsMerged.css" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/ContentsMerged.css" />
     <title>Class GenericClass</title>
 </head>
 <body><p><div id="Header">
@@ -14,7 +14,7 @@
  Command that changes the pen colour using RGB values.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -47,7 +47,7 @@
  Red component of the pen colour.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -80,7 +80,7 @@
  Green component of the pen colour.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -113,7 +113,7 @@
  Blue component of the pen colour.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -146,7 +146,7 @@
  Default constructor for factory creation.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -179,7 +179,7 @@
  Creates a new AppPenColour command with explicit RGB values.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -198,13 +198,13 @@
 The canvas on which the command will operate.
 </div>
 <div class='CommentParameterName'>r</div><div class='ParameterCommentContainer'>
-Red component (0–255).
+Red component (0?255).
 </div>
 <div class='CommentParameterName'>g</div><div class='ParameterCommentContainer'>
-Green component (0–255).
+Green component (0?255).
 </div>
 <div class='CommentParameterName'>b</div><div class='ParameterCommentContainer'>
-Blue component (0–255).
+Blue component (0?255).
 </div>
 
     
@@ -225,7 +225,7 @@ Blue component (0–255).
  Executes the pen colour change on the canvas.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -256,10 +256,11 @@ Blue component (0–255).
 
     
  Validates and parses RGB parameters for the pen command.
- Accepts either "r,g,b" as one token or three separate tokens.
+ Accepts either "r,g,b" as one token or three separate tokens, and
+ allows variables/expressions such as <span class="Code">red</span> or <span class="Code">2*radius</span>.
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -283,7 +284,7 @@ The raw parameters supplied to the command.
     
     
 <div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
    <span class='SectionHeader'>
        <span class='ArrowCursor'>
        Exceptions
@@ -299,11 +300,77 @@ The raw parameters supplied to the command.
 <th>Condition</th></tr>
 <tr>
 <td><span class='PseudoLink'>CommandException</span></td>
-<td>Thrown when fewer than 3 values are provided.</td>
+<td>Thrown when fewer than 3 values are provided or an expression cannot be evaluated.</td>
 </tr>
 <tr>
 <td><span class='PseudoLink'>RestrictionException</span></td>
-<td>Thrown when any RGB value is outside 0–255.</td>
+<td>Thrown when any RGB value is outside 0�255.</td>
+</tr>
+</table
+</div>
+</div>
+
+    
+    
+
+</div>
+
+</p><hr></hr><p><div id="Header">
+    <div id="ProjectTitle">Documentation Preview</div>
+    <div id="PageTitle">Method EvaluateToInt</div>
+    <div id="Contents" />
+
+    
+ Evaluates a BOOSE integer expression, first trying a direct parse and then
+ falling back to <span class="Code">StoredProgram.EvaluateExpressionWithString</span> so that
+ variables such as <span class="Code">red</span> can be used.
+ 
+        <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+    private int EvaluateToInt(string expr)</pre></td></tr></tbody></table>
+    
+    <div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>expr</div><div class='ParameterCommentContainer'>
+The raw expression to evaluate.
+</div>
+
+    <div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+The evaluated integer value.
+</div>
+
+    
+    
+    
+<div id='SectionHeader1' class='SectionHeader'>
+   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <span class='SectionHeader'>
+       <span class='ArrowCursor'>
+       Exceptions
+       </span>
+   </span>
+</div>
+<div id='SectionContainerDiv1' class='SectionContainer'>
+<table class='MembersTable'>
+<col width='25%' />
+<col width='75%' />
+<tr>
+<th>Exception</th>
+<th>Condition</th></tr>
+<tr>
+<td><span class='PseudoLink'>CommandException</span></td>
+<td>Thrown when the expression cannot be evaluated to an integer.</td>
 </tr>
 </table
 </div>
@@ -320,10 +387,10 @@ The raw parameters supplied to the command.
     <div id="Contents" />
 
     
- Ensures an RGB value is within the valid range (0–255).
+ Ensures an RGB value is within the valid range (0�255).
  
         <div id='SectionHeader0' class='SectionHeader'>
-        <img id='SectionExpanderImg0' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <img id='SectionExpanderImg0' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' >
         <span class='SectionHeader'>
             <span class='ArrowCursor' >
             Syntax
@@ -347,7 +414,7 @@ The value to validate.
     
     
 <div id='SectionHeader1' class='SectionHeader'>
-   <img id='SectionExpanderImg1' src='C:\Users\Asus\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
+   <img id='SectionExpanderImg1' src='C:\Users\prabi\AppData\Roaming\DocPreview\1.6.2.0\css/BigSquareExpanded.gif' alt='Collapse/Expand' /> 
    <span class='SectionHeader'>
        <span class='ArrowCursor'>
        Exceptions
